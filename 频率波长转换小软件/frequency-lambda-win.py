@@ -138,7 +138,7 @@ c_entry.grid(row=2, column=2, padx=0, pady=10, )
 # 添加结果文本框
 result_text = tk.Text(frame, height=8, width=50)
 result_text.grid(row=3, column=1, columnspan=3, padx=10, pady=20)
-result_text.configure(font=("Times New Roman", 15))
+result_text.configure(font=("Times New Roman", 20))
 
 # 自动调整内容布局
 frame.grid_rowconfigure(0, weight=1)

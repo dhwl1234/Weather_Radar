@@ -128,7 +128,7 @@ button.grid(row=2, column=3, padx=0, pady=10, sticky="w")
 # 添加结果文本框
 result_text = tk.Text(frame, height=8, width=50)
 result_text.grid(row=3, column=1, columnspan=3, padx=10, pady=20)
-result_text.configure(font=("Arial", 15))
+result_text.configure(font=("Arial", 20))
 
 # 光速输入框
 c_label = tk.Label(frame, text="光速 (m/s):", font=14)

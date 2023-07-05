@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ae8921-f5c2-4d5a-b437-39712ea8ee90" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frequency-lambda-mac.py" beforeDir="false" afterPath="$PROJECT_DIR$/frequency-lambda-mac.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frequency-lambda-win.py" beforeDir="false" afterPath="$PROJECT_DIR$/frequency-lambda-win.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/release/frequency-lambda-mac.app/Contents/MacOS/frequency-lambda-mac" beforeDir="false" afterPath="$PROJECT_DIR$/release/frequency-lambda-mac.app/Contents/MacOS/frequency-lambda-mac" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
