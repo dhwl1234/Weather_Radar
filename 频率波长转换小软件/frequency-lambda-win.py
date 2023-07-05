@@ -93,7 +93,7 @@ window.title("波长频率自动换算小软件")
 
 # 运行主循环
 # 设置窗口大小
-window.geometry("700x400")
+window.geometry("700x500")
 
 # 创建一个框架
 frame = tk.Frame(window)
@@ -138,7 +138,7 @@ c_entry.grid(row=2, column=2, padx=0, pady=10, )
 # 添加结果文本框
 result_text = tk.Text(frame, height=8, width=50)
 result_text.grid(row=3, column=1, columnspan=3, padx=10, pady=20)
-result_text.configure(font=("Times New Roman", 20))
+result_text.configure(font=("Times New Roman", 17))
 
 # 自动调整内容布局
 frame.grid_rowconfigure(0, weight=1)
