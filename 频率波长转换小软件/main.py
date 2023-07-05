@@ -1,4 +1,6 @@
 import tkinter as tk
+from tkinter import font
+
 
 def convert():
     value = entry.get()
@@ -65,7 +67,7 @@ def convert():
             result += f"\nConverted Frequency: {c / (float(value)/1000000) / 1e6} MHz"
             result += f"\nConverted Frequency: {c / (float(value)/1000000)} Hz"
 
-    result_label.config(text=result)
+    result_label.config(text=result, font=custom_font)
 
 def on_conversion_change(*args):
     conversion_type = conversion_var.get()
@@ -133,9 +135,13 @@ result_label.grid(row=3, column=1, columnspan=3, padx=10, pady=20)
 
 # 自动调整内容布局
 frame.grid_rowconfigure(0, weight=1)
+frame.grid_rowconfigure(1, weight=1)
+frame.grid_rowconfigure(3, weight=1)
 frame.grid_columnconfigure(1, weight=1)
-frame.grid_rowconfigure(2, weight=1)
+frame.grid_columnconfigure(2, weight=1)
 frame.grid_columnconfigure(3, weight=1)
+# 创建自定义字体
+custom_font = font.Font(family="Arial", size=20)  # 这里将字体设置为Arial，字体大小设置为16
 
 # 运行主循环
 window.mainloop()
