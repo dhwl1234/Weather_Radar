@@ -87,7 +87,7 @@ window.title("波长频率自动换算小软件")
 
 # 运行主循环
 # 设置窗口大小
-window.geometry("600x300")
+window.geometry("600x400")
 
 # 创建一个框架
 frame = tk.Frame(window)
@@ -133,8 +133,8 @@ result_label.grid(row=3, column=1, columnspan=3, padx=10, pady=20)
 
 # 自动调整内容布局
 frame.grid_rowconfigure(0, weight=1)
-frame.grid_rowconfigure(2, weight=1)
 frame.grid_columnconfigure(1, weight=1)
+frame.grid_rowconfigure(2, weight=1)
 frame.grid_columnconfigure(3, weight=1)
 
 # 运行主循环
