@@ -1,0 +1,13 @@
+prefix=/Users/weiyihai/中国科学院/中国科学院空天信息创新研究院/Weather_Radar/频率波长转换小软件/envs/频率波长转换小软件
+exec_prefix=/Users/weiyihai/中国科学院/中国科学院空天信息创新研究院/Weather_Radar/频率波长转换小软件/envs/频率波长转换小软件
+libdir=/Users/weiyihai/中国科学院/中国科学院空天信息创新研究院/Weather_Radar/频率波长转换小软件/envs/频率波长转换小软件/lib
+sharedlibdir=/Users/weiyihai/中国科学院/中国科学院空天信息创新研究院/Weather_Radar/频率波长转换小软件/envs/频率波长转换小软件/lib
+includedir=/Users/weiyihai/中国科学院/中国科学院空天信息创新研究院/Weather_Radar/频率波长转换小软件/envs/频率波长转换小软件/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

@@ -1,0 +1,5 @@
+#!/Users/weiyihai/中国科学院/中国科学院空天信息创新研究院/Weather_Radar/频率波长转换小软件/envs/频率波长转换小软件/bin/python3.10
+import sys
+from lib2to3.main import main
+
+sys.exit(main("lib2to3.fixes"))

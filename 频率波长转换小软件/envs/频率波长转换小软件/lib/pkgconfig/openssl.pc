@@ -1,0 +1,9 @@
+prefix=/Users/weiyihai/中国科学院/中国科学院空天信息创新研究院/Weather_Radar/频率波长转换小软件/envs/频率波长转换小软件
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: OpenSSL
+Description: Secure Sockets Layer and cryptography libraries and tools
+Version: 3.0.9
+Requires: libssl libcrypto

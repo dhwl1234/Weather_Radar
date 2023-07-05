@@ -1,0 +1,11 @@
+prefix=/Users/weiyihai/中国科学院/中国科学院空天信息创新研究院/Weather_Radar/频率波长转换小软件/envs/频率波长转换小软件
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/Users/weiyihai/中国科学院/中国科学院空天信息创新研究院/Weather_Radar/频率波长转换小软件/envs/频率波长转换小软件/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.4.4
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}
