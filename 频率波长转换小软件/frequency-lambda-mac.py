@@ -12,14 +12,16 @@ def convert():
     try:
         float(value)
     except ValueError:
-        result_label.config(text="输入错误，请重新输入")
+        result_text.delete("1.0", tk.END)
+        result_text.insert(tk.END, "输入错误，请重新输入")
         return
 
     # 检查光速是否为数字
     try:
         float(c)
     except ValueError:
-        result_label.config(text="光速输入错误，请重新输入")
+        result_text.delete("1.0", tk.END)
+        result_text.insert(tk.END, "输入光速错误，请重新输入")
         return
 
     c = float(c)  # 类型转化
@@ -42,9 +44,9 @@ def convert():
             result += f"\nConverted Wavelength: {c / (float(value) * 1e6) * 1000000} um"
         elif unit == "Hz":
             result = f"Converted Wavelength: { c / float(value) } m"
-            result += f"\nConverted Wavelength: { c / float(value) * 10} cm"
-            result += f"\nConverted Wavelength: { c / float(value) * 100} mm"
-            result += f"\nConverted Wavelength: {c / float(value) * 100000} um"
+            result += f"\nConverted Wavelength: { c / float(value) * 100} cm"
+            result += f"\nConverted Wavelength: { c / float(value) * 1000} mm"
+            result += f"\nConverted Wavelength: {c / float(value) * 1000000} um"
     else:
         if unit == "m":
             result = f"Converted Frequency: {c / float(value) / 1e12} THz"
@@ -66,8 +68,8 @@ def convert():
             result += f"\nConverted Frequency: {c / (float(value)/1000000) / 1e9} GHz"
             result += f"\nConverted Frequency: {c / (float(value)/1000000) / 1e6} MHz"
             result += f"\nConverted Frequency: {c / (float(value)/1000000)} Hz"
-
-    result_label.config(text=result, font=custom_font)
+    result_text.delete("1.0", tk.END)
+    result_text.insert(tk.END, result)
 
 def on_conversion_change(*args):
     conversion_type = conversion_var.get()
@@ -123,6 +125,11 @@ unit_dropdown.grid(row=1, column=3, padx=0, pady=10, sticky="w")
 button = tk.Button(frame, text="确定", command=convert, font=14)
 button.grid(row=2, column=3, padx=0, pady=10, sticky="w")
 
+# 添加结果文本框
+result_text = tk.Text(frame, height=8, width=50)
+result_text.grid(row=3, column=1, columnspan=3, padx=10, pady=20)
+result_text.configure(font=("Arial", 15))
+
 # 光速输入框
 c_label = tk.Label(frame, text="光速 (m/s):", font=14)
 c_label.grid(row=2, column=1, padx=0, pady=10)
@@ -130,9 +137,6 @@ c_entry = tk.Entry(frame)
 c_entry.insert(0, "299792458")
 c_entry.grid(row=2, column=2, padx=0, pady=10)
 
-# 创建结果标签
-result_label = tk.Label(frame, text="")
-result_label.grid(row=3, column=1, columnspan=3, padx=10, pady=20)
 
 # 自动调整内容布局
 frame.grid_rowconfigure(0, weight=1)
